@@ -1,22 +1,79 @@
+/* Bootstrap Modifications */
+.navbar-brand {
+	padding: 0 15px 0 0;
+}
+
+.navbar-brand > img {
+	height: 50px;
+}
+
+.well > p:last-of-type {
+	margin: 0;
+}
 
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+/* Styles for custom ordered lists */
+ol.steps {
+	font-size: 17px;
+	
+	/* Settings for custom list number styling */
+	counter-reset: li;
+	margin-left: 0;
+	padding-left: 0;
+}
+@media (min-width: 768px) {
+	/* Use a larger font size on desktops */
+	ol.steps {
+		font-size: 21px;
+	}
+}
 
+ol.steps > li {
+	position: relative;
+	margin: 0 0 30px 2em;
+	padding: 4px 8px;
+	list-style: none;
+	border-top: 2px solid #666;
+	background: #f6f6f6;
+}
 
+ol.steps > li:before {
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;
+	top: -2px;
+	left: -2em;
+	box-sizing: border-box;
+	width: 2em;
+	margin-right: 8px;
+	padding: 4px;
+	border-top: 2px solid #666;
+	color: #fff;
+	background: #666;
+	font-weight: bold;
+	text-align: center;
+}
 
+/* Alternate colors for odd/even list items */
+ol.steps > li:nth-child(odd) {
+	border-top-color: green;
+}
 
+ol.steps > li:nth-child(odd):before {
+	background: green;
+	border-top-color: green;
+}
 
+ol.steps > li:nth-child(even) {
+	border-top-color: orange;
+}
 
+ol.steps > li:nth-child(even):before {
+	background: orange;
+	border-top-color: orange;
+}
 
-
-
-
-
-
-
-
-
-
-
+.steps > li > img {
+	margin: 20px;
+	margin-left: 0;
+}
