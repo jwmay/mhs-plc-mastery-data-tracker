@@ -12,6 +12,13 @@
 }
 
 
+/* Custom styles */
+.important {
+	font-style: italic;
+	color: red;
+}
+
+
 /* Styles for custom ordered lists */
 ol.steps {
 	font-size: 17px;
@@ -30,7 +37,7 @@ ol.steps {
 
 ol.steps > li {
 	position: relative;
-	margin: 0 0 30px 2em;
+	margin: 0 0 50px 2em;
 	padding: 4px 8px;
 	list-style: none;
 	border-top: 2px solid #666;

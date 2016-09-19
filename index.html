@@ -12,7 +12,7 @@
 		<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-            <script>window.html5 || document.write('<script src="assets/js/vendor/html5shiv.js"><\/script>')</script>
+            <script>window.html5 || document.write('<script src="assets/js/html5shiv.js"><\/script>')</script>
         <![endif]-->
     </head>
     
@@ -34,8 +34,9 @@
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a href="#ic" aria-controls="ic" role="tab" data-toggle="tab">Export Gradebooks</a></li>
-						<li><a href="#plugin" aria-controls="plugin" role="tab" data-toggle="tab">Install Plugin</a></li>
+						<li class="active"><a href="#plugin" aria-controls="plugin" role="tab" data-toggle="tab">Install Plugin</a></li>
+						<li><a href="#export" aria-controls="export" role="tab" data-toggle="tab">Export Grade Books</a></li>
+						<li><a href="#import" aria-control="import" role="tab" data-toggle="tab">Import Grade Books</a></li>
 					</ul>
 				</div>
 			</div>
@@ -44,8 +45,55 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-10">
-					<div class="tab-content">
-						<div role="tabpanel" class="tab-pane fade in active" id="ic">
+					<div class="tab-content">						
+						<div role="tabpanel" class="tab-pane fade in active" id="plugin">
+							<h1>Install the Grade Book Importer Plugin</h1>
+							<div class="well well-lg">
+								<p class="lead">
+									The instructions below will guide you through the process of
+									installing the Infinite Campus Grade Importer plugin for Google Sheets.
+								</p>
+							</div>
+							<ol class="steps">
+								<li>
+									Open your copy of the <em>Teacher Mastery Tracker</em> to launch Google Sheets and
+									click the <em>Add-ons</em> menu at the top of the page
+									<img src="assets/img/plugin/1-plugin-sheets.png" class="img-responsive">
+								</li>
+								<li>
+									Click <em>Get add-ons...</em> in the dropdown menu that appears
+									<img src="assets/img/plugin/2-plugin-getaddons.png" class="img-responsive">
+								</li>
+								<li>
+									Click the <em>All</em> dropdown menu in the upper-left corner of the window that appears and
+									select <em>nv.ccsd.net collection</em> from the dropdown menu
+									<img src="assets/img/plugin/3-plugin-findaddons.png" class="img-responsive">
+								</li>
+								<li>
+									Find and click on the <em>Infinite Campus Grade Importer</em> plugin to reveal more information
+									<img src="assets/img/plugin/4-plugin-findaddon.png" class="img-responsive">
+								</li>
+								<li>
+									Click on the <em>+ Free</em> button to install the plugin
+									<img src="assets/img/plugin/5-plugin-install.png" class="img-responsive">
+								</li>
+								<li>
+									Scroll down to the bottom of the window that appears and click the <em>Allow</em> button to
+									give the plugin permission to run in your <em>Teacher Mastery Tracker</em>
+									<img src="assets/img/plugin/6-plugin-allow.png" class="img-responsive">
+								</li>
+								<li>
+									Click the <em>x</em> in the upper-right corner of the pop-up to dismiss the usage instructions
+									<img src="assets/img/plugin/7-plugin-postinstall.png" class="img-responsive">
+								</li>
+								<li>
+									The plugin is now ready to use by following the instructions in the sidebar
+									<img src="assets/img/plugin/8-plugin-use.png" class="img-responsive">
+								</li>
+							</ol>
+						</div>
+						
+						<div role="tabpanel" class="tab-pane fade" id="export">
 							<h1>Export Grade Books from Infinite Campus</h1>
 							<div class="well well-lg">
 								<p class="lead">
@@ -56,40 +104,123 @@
 							<ol class="steps">
 								<li>
 									Login to Infinite Campus
-									<img src="assets/img/ic/1-ic-login.png" class="img-responsive">
+									<img src="assets/img/export/1-export-login.png" class="img-responsive">
 								</li>
 								<li>
 									Select <em>Reports (Grade Book)</em> from the left-hand navigation column
-									<img src="assets/img/ic/2-ic-main.png" class="img-responsive">
+									<img src="assets/img/export/2-export-main.png" class="img-responsive">
 								</li>
 								<li>
 									Use the <em>Report</em> dropdown to select <em>Grade Book Export</em>
-									<img src="assets/img/ic/3-ic-reports.png" class="img-responsive">
+									<img src="assets/img/export/3-export-reports.png" class="img-responsive">
 								</li>
 								<li>
 									Check to make sure you have the correct <em>Term</em> and <em>Section</em> selected,
 									then click the <em>Generate Report</em> button
-									<img src="assets/img/ic/4-ic-export.png" class="img-responsive">
+									<img src="assets/img/export/4-export-export.png" class="img-responsive">
 								</li>
 								<li>
 									Save the file to your computer using the filename <em>pX.csv</em>,
-									where <em>X</em> is the period number
-									<img src="assets/img/ic/5-ic-save.png" class="img-responsive">
+									where <em>X</em> is the period number <span class="important">(files must be saved this
+									way for the grade importer plugin to work correctly)</span>
+									<img src="assets/img/export/5-export-save.png" class="img-responsive">
 								</li>
 								<li>
 									Repeat step 4 changing the <em>Section</em> to the next class period to export
-									<img src="assets/img/ic/6-ic-period.png" class="img-responsive">
+									<img src="assets/img/export/6-export-period.png" class="img-responsive">
 								</li>
 								<li>
 									Repeat step 5 using the same naming convention (<em>pX.csv</em>) changing <em>X</em>
 									to the new class period
-									<img src="assets/img/ic/7-ic-save.png" class="img-responsive">
+									<img src="assets/img/export/7-export-save.png" class="img-responsive">
 								</li>
 							</ol>
 						</div>
-						
-						<div role="tabpanel" class="tab-pane fade" id="plugin">
-							<h1>Install the Grade Book Importer Plugin</h1>
+
+						<div role="tabpanel" class="tab-pane fade" id="import">
+							<h1>Import Grade Books from Infinite Campus</h1>
+							<div class="well well-lg">
+								<p class="lead">
+									The instructions below will guide you through the process of
+									importing your Infinite Campus grade book files into the Mastery
+									Data Tracker using the Infinite Campus Grade Importer plugin for
+									Google Sheets.
+								</p>
+							</div>
+							<ol class="steps">
+								<li>
+									If the <em>Infinite Campus Grade Importer</em> sidebar is not showing,
+									click <em>Add-ons</em> in the top menu
+									<img src="assets/img/import/1-import-addons.png" class="img-responsive">
+								</li>
+								<li>
+									Select <em>Infinite Campus Grade Importer</em> from the dropdown menu and
+									click on <em>Start</em> to launch the sidebar
+									<img src="assets/img/import/2-import-start.png" class="img-responsive">
+								</li>
+								<li>
+									Begin step 1 by clicking the <em>Load gradebooks</em> button
+									<img src="assets/img/import/3-import-load.png" class="img-responsive">
+								</li>
+								<li>
+									Drag and drop your exported Infinite Campus files or click the <em>Select files
+									from your computer</em> button to select your files <em>(if your files are already on
+									Google Drive you can click the Google Drive tab to locate the files there)</em>
+									<img src="assets/img/import/4-import-filedrop.png" class="img-responsive">
+								</li>
+								<li>
+									Click the <em>Upload</em> button to import the files
+									<img src="assets/img/import/5-import-upload.png" class="img-responsive">
+								</li>
+								<li>
+									Click the <em>Close</em> button to complete step 1
+									<img src="assets/img/import/6-import-complete.png" class="img-responsive">
+								</li>
+								<li>
+									Begin step 2 by clicking the <em>Import scores</em> button
+									<img src="assets/img/import/7-import-scores.png" class="img-responsive">
+								</li>
+								<li>
+									Click the <em>Select gradebooks</em> button to import scores for the checked class periods
+									<span class="important">(all selected class periods must have identical assignments for the
+									plugin to work properly)</span>
+									<img src="assets/img/import/8-import-gradebooks.png" class="img-responsive">
+								</li>
+								<li>
+									Check the assignments whose scores will be imported then click the <em>Select assignments</em> button
+									<img src="assets/img/import/9-import-assignments.png" class="img-responsive">
+								</li>
+								<li>
+									For each selected assignment, choose a learning goal number using the <em>Select learning goal</em> dropdown,
+									then give the learning goal a title (if the imported scores are a re-take, check the <em>Re-take</em> box)
+									<img src="assets/img/import/10-import-setlgs.png" class="img-responsive">
+								</li>
+								<li>
+									Click the <em>Import mastery data</em> button
+									<img src="assets/img/import/11-import-import.png" class="img-responsive">
+								</li>
+								<li>
+									Click the <em>Close</em> button to complete step 2
+									<img src="assets/img/import/12-import-close.png" class="img-responsive">
+								</li>
+								<li>
+									Begin step 3 by clicking the <em>Delete sheets</em> button
+									<img src="assets/img/import/13-import-delete.png" class="img-responsive">
+								</li>
+								<li>
+									Click the <em>DELETE GRADEBOOKS</em> button to remove the checked sheets from the data tracker
+									<em>(your imported scores will not be removed)</em>
+									<img src="assets/img/import/14-import-select.png" class="img-responsive">
+								</li>
+								<li>
+									Click the <em>Close</em> button to complete step 3
+									<img src="assets/img/import/15-import-close.png" class="img-responsive">
+								</li>
+								<li>
+									Click the <em>x</em> in the upper-right corner of the sidebar to close it
+									<img src="assets/img/import/16-import-sidebar.png" class="img-responsive">
+								</li>
+							</ol>
 						</div>
 					</div>
 				</div>
@@ -97,8 +228,7 @@
 		</div>
 	
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>	
-	    <script src="assets/js/vendor/bootstrap.min.js"></script>
-	    <script src="assets/js/main.js"></script>
+	    <script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.2.min.js"><\/script>')</script>	
+	    <script src="assets/js/bootstrap.min.js"></script>
     </body>
 </html>
