@@ -13,6 +13,10 @@
 
 
 /* Custom styles */
+.navbar-container {
+	height: 72px;
+}
+
 .important {
 	font-style: italic;
 	color: red;
@@ -37,7 +41,7 @@ ol.steps {
 
 ol.steps > li {
 	position: relative;
-	margin: 0 0 50px 2em;
+	margin: 0 0 100px 2em;
 	padding: 4px 8px;
 	list-style: none;
 	border-top: 2px solid #666;

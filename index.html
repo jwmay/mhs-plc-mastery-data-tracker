@@ -17,30 +17,32 @@
     </head>
     
     <body>
-		<nav class="navbar navbar-default">
-			<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="https://jwmay.github.io/mhs-plc-mastery-data-tracker/">
-						<img alt="Brand" src="assets/img/logo/mojave-plc-mastery-tracker-logo.png">
-					</a>
+	    <div class="navbar-container">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="https://jwmay.github.io/mhs-plc-mastery-data-tracker/">
+							<img alt="Brand" src="assets/img/logo/mojave-plc-mastery-tracker-logo.png">
+						</a>
+					</div>
+					
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#plugin" aria-controls="plugin" role="tab" data-toggle="tab">Install Plugin</a></li>
+							<li><a href="#export" aria-controls="export" role="tab" data-toggle="tab">Export Grade Books</a></li>
+							<li><a href="#import" aria-control="import" role="tab" data-toggle="tab">Import Grade Books</a></li>
+						</ul>
+					</div>
 				</div>
-				
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#plugin" aria-controls="plugin" role="tab" data-toggle="tab">Install Plugin</a></li>
-						<li><a href="#export" aria-controls="export" role="tab" data-toggle="tab">Export Grade Books</a></li>
-						<li><a href="#import" aria-control="import" role="tab" data-toggle="tab">Import Grade Books</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+			</nav>
+	    </div>
 	    
 		<div class="container">
 			<div class="row">
@@ -131,7 +133,8 @@
 								</li>
 								<li>
 									Repeat step 5 using the same naming convention (<em>pX.csv</em>) changing <em>X</em>
-									to the new class period
+									to the new class period <span class="important">(for CC classes, the file should be
+									named pXcc.csv)</span>
 									<img src="assets/img/export/7-export-save.png" class="img-responsive">
 								</li>
 							</ol>
